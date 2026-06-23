@@ -16,7 +16,7 @@ def cinema_visit(
     customer_objects = []
 
     for customer in customers:
-        customer_obj = Customer(customer["name"])
+        customer_obj = Customer(customer["name"], customer.get("food"))
         customer_objects.append(customer_obj)
 
         if customer.get("food"):

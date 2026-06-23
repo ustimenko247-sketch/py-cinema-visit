@@ -1,15 +1,7 @@
-class CinemaBar:
-    def __init__(self):
-        self.menu = ["Coca-Cola", "Popcorn", "Beer"]
+class Customer:
+    def __init__(self, name: str, food: str | None = None) -> None:
+        self.name = name
+        self.food = food
 
-    def show_menu(self):
-        print(self.menu)
-
-    def order(self, product: str):
-        if product in self.menu:
-            return f"You ordered {product}"
-        return "Product not available"
-
-    @staticmethod
-    def sell_product(customer, product: str):
-        print(f"{customer.name} bought {product}")
+    def watch_movie(self, movie: str) -> None:
+        print(f"{self.name} is watching '{movie}'")
