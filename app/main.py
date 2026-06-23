@@ -1,8 +1,7 @@
-from __future__ import annotations
 from app.cinema.hall import CinemaHall
-from app.people.cinema_staff import Cleaner
-from app.people.customer import Customer
 from app.cinema.bar import CinemaBar
+from app.people.customer import Customer
+from app.people.cinema_staff import Cleaner
 
 
 def cinema_visit(

@@ -1,10 +1,9 @@
-from __future__ import annotations
 from app.people.customer import Customer
 from app.people.cinema_staff import Cleaner
 
 
 class CinemaHall:
-    def __init__(self, number: int) -> None:
+    def __init__(self, number: int) -> None:   # змінено на 'number'
         self.number = number
 
     def movie_session(
