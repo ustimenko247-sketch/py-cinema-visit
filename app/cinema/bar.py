@@ -1,7 +1,4 @@
-class Customer:
-    def __init__(self, name: str, food: str | None = None) -> None:
-        self.name = name
-        self.food = food
-
-    def watch_movie(self, movie: str) -> None:
-        print(f"{self.name} is watching '{movie}'")
+class CinemaBar:
+    @staticmethod
+    def sell_product(customer, product):
+        print(f"Cinema bar sold {product} to {customer.name}.")

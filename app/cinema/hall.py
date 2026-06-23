@@ -1,13 +1,19 @@
+from app.cinema.bar import CinemaBar
+
 class CinemaHall:
-    def __init__(self, hall_number: int) -> None:
-        self.hall_number = hall_number
-        self.is_open = False
+    def __init__(self, number):
+        self.number = number
 
-    def open(self) -> None:
-        self.is_open = True
+    def movie_session(self, movie, customers, cleaner):
+        # початок фільму
+        print(f'"{movie}" started in hall number {self.number}.')
 
-    def start_movie(self, movie: str) -> None:
-        print(f"Movie '{movie}' started in hall {self.hall_number}")
+        # перегляд фільму
+        for customer in customers:
+            customer.watch_movie(movie)
 
-    def end_movie(self, movie: str) -> None:
-        print(f"Movie '{movie}' ended in hall {self.hall_number}")
+        # завершення фільму
+        print(f'"{movie}" ended.')
+
+        # прибирання залу
+        cleaner.clean_hall(self.number)
