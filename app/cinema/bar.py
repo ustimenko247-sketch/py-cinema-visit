@@ -1,4 +1,4 @@
-from app.people.customer import Customer
+from app.people.customer import Customer  # noqa: F401
 
 
 class CinemaBar:
