@@ -1,19 +1,20 @@
-from app.cinema.bar import CinemaBar
+from __future__ import annotations
+from app.people.customer import Customer
+from app.people.cinema_staff import Cleaner
+
 
 class CinemaHall:
-    def __init__(self, number):
+    def __init__(self, number: int) -> None:
         self.number = number
 
-    def movie_session(self, movie, customers, cleaner):
-        # початок фільму
+    def movie_session(
+        self,
+        movie: str,
+        customers: list[Customer],
+        cleaner: Cleaner,
+    ) -> None:
         print(f'"{movie}" started in hall number {self.number}.')
-
-        # перегляд фільму
         for customer in customers:
             customer.watch_movie(movie)
-
-        # завершення фільму
         print(f'"{movie}" ended.')
-
-        # прибирання залу
         cleaner.clean_hall(self.number)
